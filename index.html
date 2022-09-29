@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>WE CARE</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,50 +14,49 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script> 
-  $(document).ready(function(){
-    $("#flip").click(function(){
-      $("#panel").slideToggle("slow");
+  <script>
+    $(document).ready(function () {
+      $("#flip").click(function () {
+        $("#panel").slideToggle("slow");
+      });
     });
-  });
-</script>
-<style>
-body {
-  font-size: 28px;
-}
+  </script>
+  <style>
+    body {
+      font-size: 15px;
+    }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-}
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: -webkit-sticky;
+      /* Safari */
+      position: sticky;
+      top: 0;
+    }
 
-li {
-  float: left;
-}
+    li {
+      float: left;
+    }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
-li a:hover {
-  background-color: #111;
-}
+    li a:hover {
+      background-color: #111;
+    }
 
-.active {
-  background-color: #4CAF50;
-}
-
-
+    .active {
+      background-color: #4CAF50;
+    }
 
 
 
@@ -64,47 +64,52 @@ li a:hover {
 
 
 
-div.slide-left {
-  width:100%;
-  overflow:hidden;
-}
-div.slide-left p {
-  animation: slide-left 5s;
-}
 
-@keyframes slide-left {
-  from {
-    margin-left: 100%;
-    width: 300%; 
-  }
 
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-div.slide-right {
-      width:100%;
-      overflow:hidden;
+    div.slide-left {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    div.slide-left p {
+      animation: slide-left 5s;
+    }
+
+    @keyframes slide-left {
+      from {
+        margin-left: 100%;
+        width: 300%;
+      }
+
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+
+    div.slide-right {
+      width: 100%;
+      overflow: hidden;
       text-align: right;
       border: solid 1px #c3c3c3;
       padding-block-end: 50px;
     }
+
     div.slide-right p {
       animation: 5s slide-right;
     }
-    
+
     @keyframes slide-right {
       from {
         margin-left: -100%;
         width: 300%;
       }
-    
+
       to {
         margin-left: 0%;
         width: 100%;
       }
-      
+
     }
 
 
@@ -112,35 +117,92 @@ div.slide-right {
 
 
 
-    #panel, #flip {
-  padding: 5px;
-  text-align: center;
-  background-color: #e5eecc;
-  border: solid 1px #c3c3c3;
-}
+    #panel,
+    #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: solid 1px #c3c3c3;
+    }
 
-#panel {
-  padding: 50px;
-  display: none;
-}
-</style>
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    #size,
+    #transform {
+      height: 80px;
+      position: absolute;
+      animation-iteration-count: infinite;
+      animation-duration: 3s;
+      animation-direction: alternate;
+      padding-top: 1000px;
+      padding-left: 550px;
+    }
+
+    #size {
+      animation-name: size;
+    }
+
+    @keyframes size {
+      from {
+        font-size: 10px;
+        left: 550px;
+        top: 40px;
+      }
+
+      to {
+        font-size: 80px;
+        top: 0;
+        left: 30px;
+      }
+    }
+
+    #transform {
+      animation-name: transform;
+      transform-origin: center middle;
+      font-size: 80px;
+      top: 80px;
+    }
+
+    @keyframes transform {
+      from {
+        transform: scale(.1);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 
 
 
-<div class="header">
- <img src="img.jpg" alt="">
-</div>
+  <div class="header">
+    <img src="img.jpg" alt="">
+  </div>
 
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
-
-
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
 
 
@@ -148,21 +210,56 @@ div.slide-right {
 
 
 
-<div class="slide-left">
-  <p>Never fight an inanimate object.</p>
+
+
+  <div class="slide-left">
+    <p>Never fight an inanimate object.</p>
   </div>
 
 
   <div class="slide-right">
-  <p>Everything is funny, as long as it's happening to somebody else.</p>
+    <p>Everything is funny, as long as it's happening to somebody else.</p>
   </div>
-    
-  
+
+
 
 
 
 
   <div id="flip">Click to to know about mentel helth</div>
-<div id="panel">you are a gay with best helth</div>
+  <div id="panel">you are a guy with best helth</div>
+
+
+
+
+
+  <p style="padding-left: 300px;  font-size: 150%; ">
+    <strong> but #####</strong>
+  </p>
+
+
+
+
+
+
+
+
+
+  <div id=size>mental</div>
+  <div id=transform>######</div>
+
+
+
+
+
+
+  <div style="height: 300px;"></div>
+
+
+
+  <div style="height: 30rem;border: solid 5px #c3c3c3;">
+    <h1 style="border: solid 1px #d8d2d2;">i am shivam</h1>
+  </div>
 </body>
+
 </html>
