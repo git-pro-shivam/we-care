@@ -1,29 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>WE CARE</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#flip").click(function () {
-        $("#panel").slideToggle("slow");
-      });
-    });
-  </script>
+  <title>we care</title>
   <style>
     body {
-      font-size: 15px;
+      background-color: rgb(255, 170, 0);
     }
 
     ul {
@@ -51,11 +33,11 @@
     }
 
     li a:hover {
-      background-color: #2eddb1cc;
+      background-color: #111;
     }
 
     .active {
-      background-color: #37eec0;
+      background-color: #aed62e;
     }
 
 
@@ -66,68 +48,91 @@
 
 
 
-    div.slide-left {
-      width: 100%;
-      overflow: hidden;
+    * {
+      box-sizing: border-box
     }
 
-    div.slide-left p {
-      animation: slide-left 5s;
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
     }
 
-    @keyframes slide-left {
-      from {
-        margin-left: 100%;
-        width: 300%;
-      }
-
-      to {
-        margin-left: 0%;
-        width: 100%;
-      }
+    /* Slideshow container */
+    .slideshow-container {
+      position: relative;
+      background: #f1f1f1f1;
     }
 
-    div.slide-right {
-      width: 100%;
-      overflow: hidden;
-      text-align: right;
-      border: solid 1px #c3c3c3;
-      padding-block-end: 50px;
-    }
-
-    div.slide-right p {
-      animation: 5s slide-right;
-    }
-
-    @keyframes slide-right {
-      from {
-        margin-left: -100%;
-        width: 300%;
-      }
-
-      to {
-        margin-left: 0%;
-        width: 100%;
-      }
-
-    }
-
-
-
-
-
-
-    #panel,
-    #flip {
-      padding: 5px;
-      text-align: center;
-      background-color: #e5eecc;
-      border: solid 1px #c3c3c3;
-    }
-
-    #panel {
-      padding: 50px;
+    /* Slides */
+    .mySlides {
       display: none;
+      padding: 80px;
+      text-align: center;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: #888;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      position: absolute;
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+
+    /* The dot/bullet/indicator container */
+    .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    /* Add a background color to the active dot/circle */
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Add an italic font style to all quotes */
+    q {
+      font-style: italic;
+    }
+
+    /* Add a blue color to the author */
+    .author {
+      color: cornflowerblue;
     }
 
 
@@ -141,43 +146,131 @@
 
 
 
-    
+    body {
+  font-family: Arial;
+}
 
+* {
+  box-sizing: border-box;
+}
 
+/* .openBtn {
+  background: #f1f1f1;
+  border: none;
+ 
+  font-size: 20px;
+  cursor: pointer;
+} */
 
+/* .openBtn:hover {
+  background: #bbb;
+} */
 
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
 
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
 
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
 
-    .p-4:hover {
-          transform: scale(1.06);
-        }
+.overlay .closebtn:hover {
+  color: #ccc;
+}
 
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
 
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
 
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
 
-
-        body{
-          background-color: #37eec0;
-        }
+.overlay button:hover {
+  background: #bbb;
+}
   </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+  <div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
 
 
-
-
-  <div class="header">
-    <img src="img.jpg" alt="">
+  <div class="header" style="padding: 17rem;text-align: center;background-image: url(img1.jpg);font-size: 45px;">
+    <h2>WE CARE</h2>
+    <div class="openBtn" onclick="openSearch()">
+      <a href="#"><i class="fa fa-search"></i></a>
+    </div>
   </div>
 
+
+  <script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
   <ul>
-    <li><a class="active" href="home">Home</a></li>
-    <li><a href="news">News</a></li>
-    <li><a href="contact">Contact</a></li>
-      </div>
-    </li>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#contect">Help us</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#home">###</a></li>
   </ul>
 
 
@@ -186,111 +279,95 @@
 
 
 
+  <div class="slideshow-container">
 
-
-  <div class="slide-left">
-    <p>Never fight an inanimate object.</p>
-  </div>
-
-
-  <div class="slide-right">
-    <p>Everything is funny, as long as it's happening to somebody else.</p>
-  </div>
-
-
-
-
-
-
-  <div id="flip">Click to to know about mentel helth</div>
-  <div id="panel">you are a guy with best helth</div>
-
-
-
-
-
-  <p style="padding-left: 300px;  font-size: 150%; ">
-    <strong> but #####</strong>
-  </p>
-
-
-
-
-
-
-
-
-<div>
-  <div id=size>mental</div>
-  <div id=transform>######</div>
-</div>
-
-
-
-
-
-  <div style="height: 300px;background-image: url('img.jpg');"></div>
-
-
-
-  <div style="height: 30rem;border: solid 5px #c3c3c3;">
-    <h1 style="border: solid 1px #d8d2d2;">i am shivam</h1>
-  </div>
-
-
-
-
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-col">
-      
-        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">effects</h1>
-          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">hiiii</p>
-        </div>
-      </div>
-      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6" style="background-color: coral;margin: 2px;width: 390px;">
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="img.jpg">
-          </div>
-          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Shooting Stars</h2>
-          <p class="text-base leading-relaxed mt-2">hiiii</p>
-          <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-        <a href="GAME.html">
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6" style="background-color: rgb(255, 252, 80);width: 390px;">
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="img.jpg">
-          </div>
-          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">game</h2>
-          <p class="text-base leading-relaxed mt-2">click me</p>
-          <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </a>
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6" style="background-color: rgb(194, 255, 80);margin: 2px;width: 390px;"hover>
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="img.jpg">
-          </div>
-          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
-          <p class="text-base leading-relaxed mt-2">hiiii</p>
-          <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
+    <div class="mySlides">
+      <q>If you develop an eating disorder when you are already thin to begin with,
+        you go to the hospital.
+        If you develop an eating disorder when you are not thin to begin with,
+        you are a success story.
+        So when I evaporated, of course everyone congratulated me on getting healthy.
+        Girls at school who never spoke to me before, stopped me in the hallway to ask how I did it.
+        I say “I'm sick”. They say “No, you're an inspiration!”
+        How could I not fall in love with my illness?
+        With becoming the kind of silhouette people are supposed to fall in
+        love with?
+        Why would I ever stop being hungry, when anorexia was the
+        most interesting thing about me?
+        So lucky it is now, to be boring.
+        The way looking at an apple and seeing only an apple, not sixty, or
+        half an hour sit-ups is boring.
+        My story may not be as exciting as it used to,
+        but at least there is nothing left to count.</q>
+      <p class="author">- By Blythe Baird</p>
     </div>
-  </section>
+
+    <div class="mySlides">
+      <q>The first time I saw her…
+        Everything in my head went quiet.
+        All the tics, all the constantly refreshing images just disappeared.
+        When you have Obsessive Compulsive Disorder, you don't really get quiet moments.
+        Even in bed, I;m thinking:
+        Did I lock the doors? Yes.
+        Did I wash my hands? Yes.
+        Did I lock the doors? Yes.
+        Did I wash my hands? Yes.
+        But when I saw her, the only thing I could think about was the hairpin curve of her lips..
+        Or the eyelash on her cheek —
+        the eyelash on her cheek —
+        the eyelash on her cheek.</q>
+      <p class="author">- By Neil Hilbon</p>
+    </div>
+
+    <div class="mySlides">
+      <q>when the world comes crashing at your feet
+        it's okay to let others
+        help pick up the pieces
+        if we're present to take part in your happiness
+        when your circumstances are great
+        we are more than capable
+        of sharing your pain</q>
+      <p class="author">- By Rupi Kaur</p>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
 
 
 
@@ -299,41 +376,6 @@
 
 
 
-
-
-
-  <div id="piechart" style="padding-left: 700px;">
-  <h1>
- day <br> to day <br> life style
-  </h1>
-</div>
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-<script type="text/javascript">
-// Load google charts
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-// Draw the chart and set the chart values
-function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
-  ['helth', 8],
-  ['Eat', 2],
-  ['workout', 4],
-  ['mentel', 2],
-  ['Sleep', 8]
-]);
-
-  // Optional; add a title and set the width and height of the chart
-  var options = {'title':'MENTAL HELTH', 'width':550, 'height':400};
-
-  // Display the chart inside the <div> element with id="piechart"
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-  chart.draw(data, options);
-}
-</script>
 </body>
 
 </html>
