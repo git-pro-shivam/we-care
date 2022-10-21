@@ -15,7 +15,6 @@
       overflow: hidden;
       background-color: #333;
       position: -webkit-sticky;
-      /* Safari */
       position: sticky;
       top: 0;
     }
@@ -34,10 +33,6 @@
 
     li a:hover {
       background-color: #111;
-    }
-
-    .active {
-      background-color: #aed62e;
     }
 
 
@@ -154,17 +149,7 @@
   box-sizing: border-box;
 }
 
-/* .openBtn {
-  background: #f1f1f1;
-  border: none;
- 
-  font-size: 20px;
-  cursor: pointer;
-} */
 
-/* .openBtn:hover {
-  background: #bbb;
-} */
 
 .overlay {
   height: 100%;
@@ -226,6 +211,18 @@
 .overlay button:hover {
   background: #bbb;
 }
+
+
+
+
+
+.logo{
+  float: left;
+  padding-left: 100px;
+}
+.logo a:hover {
+      background-color: #333;
+    }
   </style>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
@@ -265,17 +262,22 @@ function closeSearch() {
   document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-
   <ul>
+    <li class="logo"><a href="index.html"><strong>WE CARE</strong></a></li>
     <li><a class="active" href="#home">Home</a></li>
-    <li><a href="#contect">Help us</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="#contect">contect us</a></li>
+    <li><a href="about.html">About us</a></li>
     <li><a href="#home">###</a></li>
   </ul>
 
 
 
 
+
+
+
+
+  
 
 
 

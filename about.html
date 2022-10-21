@@ -1,54 +1,237 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+	<title>
+		Create a Search Bar using HTML and CSS
+	</title>
+	
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.icon-bar{
-    padding-top: 7rem;
+html {
+  box-sizing: border-box;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}.column {
+  float: left;
+  width: 33.3%;
+  margin-top: 16px;
+  padding: 0 8px;
+}
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
 
-    body {
-        background-color: rgb(255, 170, 0);
-    }
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
 
-    body {
-        margin: 0
-    }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-    .icon-bar {
-        width: 90px;
-        background-color: #555;
-    }
+.container {
+  padding: 0 16px;
+}
 
-    .icon-bar a {
-        display: block;
-        text-align: center;
-        padding: 16px;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 36px;
-    }
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-    .icon-bar a:hover {
-        background-color: #000;
-    }
+.title {
+  color: grey;
+}
 
-    .active {
-        background-color: #04AA6D;
-    }
-</style>
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/* styling navlist */
+		#navlist {
+			background-color: #0074D9;
+			position: absolute;
+			width: 100%;
+		}
+		
+		/* styling navlist anchor element */
+		#navlist a {
+			float:left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 12px;
+			text-decoration: none;
+			font-size: 15px;
+		}
+		.navlist-right{
+			float:right;
+		}
+
+		/* hover effect of navlist anchor element */
+		#navlist a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+		
+		/* styling search bar */
+		.search input[type=text]{
+			width:300px;
+			height:25px;
+			border-radius:25px;
+			border: none;
+
+		}
+		
+		.search{
+			float:right;
+			margin:7px;
+
+		}
+		
+		.search button{
+			background-color: #0074D9;
+			color: #f2f2f2;
+			float: right;
+			padding: 5px 10px;
+			margin-right: 16px;
+			font-size: 12px;
+			border: none;
+			cursor: pointer;
+		}
+        body{
+            background-color: aqua;
+        }
+
+
+
+
+        .content{
+            background-color: #fff;
+            border: 1px solid aqua;
+            
+        }
+	</style>
+</head>
 
 <body>
+	
+	<!-- Navbar items -->
+	<div id="navlist">
+		<a href="index.html">Home</a>
+		<a href="#">about</a>
+		<a href="about.html">About Us</a>
+		<a href="#">Contact Us</a>
+        <a href="index.html" style="padding-left: 40rem;"><img src="" alt="not ready"></a>
+		
+		<!-- search bar right align -->
+		<div class="search">
+				<input type="text"
+					placeholder=" Search Courses"
+					name="search">
+				<a href="sirch.html"></a><button class="sirch">
+					<i class="fa fa-search"
+						style="font-size: 18px;">
+					</i>
+				</button><a>
+			</form>
+		</div>
+	</div>
+	
+	</div>
 
-    <div class="icon-bar">
-        <a class="active" href="#"><i class="fa fa-home"></i></a>
-        <a href="#"><i class="fa fa-search"></i></a>
-        <a href="#"><i class="fa fa-envelope"></i></a>
-        <a href="#"><i class="fa fa-globe"></i></a>
-        <a href="#"><i class="fa fa-trash"></i></a>
+
+
+
+
+
+
+
+<div style="height: 20rem;"></div>
+
+<div class="content">
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="img1.jpg" alt="??????" style="width:100%">
+            <div class="container">
+              <h2>##########</h2>
+              <p class="title">CEO & Founder</p>
+              <p>##########</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="img1.jpg" alt="??????" style="width:100%">
+            <div class="container">
+              <h2>##########</h2>
+              <p class="title">Director</p>
+              <p>##########</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="img1.jpg" alt="?????" style="width:100%">
+            <div class="container">
+              <h2>##########</h2>
+              <p class="title">Designer</p>
+              <p>##########.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
 </body>
 
-</html>
+</html>				
